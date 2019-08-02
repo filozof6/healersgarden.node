@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Centre name",
+    "description": "Some description about the centre",
+    "link": "http://www.example.com"
+  },
+  {
+    "id": 2,
+    "name": "Centre name2",
+    "description": "Some description about the centre.",
+    "link": "http://www.example.com"
+  },
+  {
+    "id": 3,
+    "name": "Noya rhao",
+    "description": "Un centro de la selva.",
+    "link": "http://www.example.com"
+  },
+  {
+    "id": 4,
+    "name": "Santuario",
+    "description": "Un centro de la selva.",
+    "link": "http://www.example.com"
+  }
+]

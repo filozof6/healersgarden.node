@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Edgar Cauper Rengifo (Chononita)",
+    "description": "Un curandero de la selva.",
+    "photo": "edgar-centro.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Cecilio Cauper Bona (Meansany)",
+    "description": "Un curandero de la selva.",
+    "photo": "cecilio-centro-tarde.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Benjamin Cauper Rengifo (Soysheka)",
+    "description": "Un curandero de la selva.",
+    "photo": "benjamin-centro-manana.jpg"
+  },
+  {
+    "id": 4,
+    "name": "José Abdeo Rengifo",
+    "description": "Un curandero de la selva.",
+    "photo": "jose-shaman.jpg"
+  }
+]

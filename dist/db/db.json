@@ -1,0 +1,56 @@
+{
+  "healers": [
+    {
+      "id": 1,
+      "name": "Edgar Cauper Rengifo (Chononita)",
+      "description": "Un curandero de la selva.",
+      "photo": "edgar-centro.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Cecilio Cauper Bona (Meansany)",
+      "description": "Un curandero de la selva.",
+      "photo": "cecilio-centro-tarde.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Benjamin Cauper Rengifo (Soysheka)",
+      "description": "Un curandero de la selva.",
+      "photo": "benjamin-centro-manana.jpg"
+    },
+    {
+      "id": 4,
+      "name": "José Abdeo Rengifo",
+      "description": "Un curandero de la selva.",
+      "photo": "jose-shaman.jpg"
+    }
+  ],
+  "comments": [{ "id": 1, "body": "some comment", "postId": 1 }],
+  "profile": { "name": "typicode" },
+  "dreams": [
+    {
+      "id": 1,
+      "name": "Dream 1",
+      "description": "Un curandero de la selva.",
+      "lucid": true
+    },
+    {
+      "id": 2,
+      "name": "Dream 2",
+      "description": "Un curandero de la selva.",
+      "lucid": true
+    },
+    {
+      "id": 3,
+      "name": "Dream 3",
+      "description": "Un curandero de la selva.",
+      "lucid": false
+    },
+    {
+      "id": 4,
+      "name": "Dream 4",
+      "description": "Un curandero de la selva.",
+      "lucid": false
+    }
+  ]
+}

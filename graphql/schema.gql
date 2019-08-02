@@ -1,0 +1,39 @@
+scalar DateTime;
+
+type User {
+  id: ID!
+  name: String!
+  description: String!
+  lucid: Boolean
+  datetime: 
+  user_id: 
+}
+
+type Dream {
+  id: ID!
+  name: String!
+  description: String!
+  lucid: Boolean
+  datetime: DateTime
+  user: User!
+}
+
+input sortable() {
+  offset: Int,
+  limit: Int,
+}
+
+type Query {
+  dreams(user: ID!): [Dream!]!
+  dream(user: ID!): [Dream]!
+}
+
+type Mutation {
+  addDream(name: String!, description: String! lucid: Boolean = false): Dream!
+  removeDream(id: ID!): Dream!
+}
+
+schema {
+  query: Query
+  mutation: Mutation
+}
