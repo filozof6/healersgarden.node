@@ -10,7 +10,9 @@ var CentreSchema = new Schema({
         createdAt: 'created_at',
         updatedAt: 'updated_at', 
         } 
-    });
+  });
+  
+CentreSchema.index({ name: 1})
     
 var Centre = mongoose.model('Centre', CentreSchema );
 

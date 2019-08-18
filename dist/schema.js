@@ -108,17 +108,14 @@ var RootQuery = new GraphQLObjectType({
       type: HealerType,
       args: {
         id: {
-          type: GraphQLInt
+          type: GraphQLString
         }
       },
       resolve: function resolve(parentValue, args) {
         if (args.id) {
-          for (var i = 0; i < dreams.length; i++) {
-            if (dreams[i].id == args.id) {
-              return dreams[i];
-            }
-          }
+          return _healer["default"].findById(args.id);
         } else {
+          console.log('ajajaj');
           return _healer["default"].find({});
         }
       }

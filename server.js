@@ -5,11 +5,15 @@ const db = require('./db/connection.js')
 const Healer = require('./db/models/healer.js')
 const Seed = require('./db/seeds/seed.js')
 const cors = require('cors')
+const { makeExecutableSchema } = require('graphql-tools');
+const typeDefs = require('./graphql/types.js');
+const resolvers = require('./graphql/resolvers.js');
 
 const app = express();
+const schema2 = makeExecutableSchema({ typeDefs, resolvers });
 
 app.use('/graphql', cors(), expressGraphQL({
-    schema:schema,
+    schema:schema2,
     graphiql: true,
 }))
 app.use('/debug', (req, res) => {

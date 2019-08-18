@@ -4,7 +4,8 @@ var mongoose = require('mongoose');
 var HealerSchema = new Schema({
     name: { type: String, trim: true },
     description: { type: String, trim: true },
-    photo: { type: String, trim: true }
+    photo: { type: String, trim: true },
+    address: AddressSchema,
   });
 var Healer = mongoose.model('Healer', HealerSchema );
 
@@ -17,7 +18,9 @@ var Plant = mongoose.model('Plant', PlantSchema );
 var CentreSchema = new Schema({
     name: { type: String, trim: true },
     link: { type: String, trim: true },
-    socialLinks: String
+    socialLinks: [String],
+    address: AddressSchema,
+
   });
 var Centre = mongoose.model('Centre', CentreSchema );
 

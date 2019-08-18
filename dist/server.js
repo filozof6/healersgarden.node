@@ -12,9 +12,22 @@ var Healer = require('./db/models/healer.js');
 
 var Seed = require('./db/seeds/seed.js');
 
+var cors = require('cors');
+
+var _require = require('graphql-tools'),
+    makeExecutableSchema = _require.makeExecutableSchema;
+
+var typeDefs = require('./graphql/types.js');
+
+var resolvers = require('./graphql/resolvers.js');
+
 var app = express();
-app.use('/graphql', expressGraphQL({
-  schema: schema,
+var schema2 = makeExecutableSchema({
+  typeDefs: typeDefs,
+  resolvers: resolvers
+});
+app.use('/graphql', cors(), expressGraphQL({
+  schema: schema2,
   graphiql: true
 }));
 app.use('/debug', function (req, res) {
@@ -33,4 +46,13 @@ app.use('/seed/:seedType', function (req, res) {
 });
 app.listen(4000, function () {
   console.log('server running on port 4000');
+});
+app.get('/lol', cors(), function (req, res) {
+  Healer.find({
+    _id: "5d2b2a69971bba67e01e3c46"
+  }).exec(function (err, leads) {
+    console.log('leads');
+    console.log(leads);
+  });
+  res.send('lol');
 });

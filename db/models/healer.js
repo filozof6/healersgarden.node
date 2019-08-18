@@ -11,6 +11,7 @@ var HealerSchema = new Schema({
         updatedAt: 'updated_at', 
         } 
     });
+HealerSchema.index({ name: 1})
 
 var Healer = mongoose.model('Healer', HealerSchema );
 
